@@ -12,6 +12,11 @@ const routes: Routes = [
 
   },
   {
+    path: 'estados',
+    loadChildren: () => import('./estados/estados.module').then(m => m.EstadosModule)
+
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: '/home'
